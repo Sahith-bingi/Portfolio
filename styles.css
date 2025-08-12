@@ -1,0 +1,67 @@
+
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #1e90ff;
+  --muted: #9aa4b2;
+  --glass: rgba(255,255,255,0.03);
+  --maxw: 980px;
+  --pad: 20px;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; background:linear-gradient(180deg,#071020 0%, #0a1624 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+.container{max-width:var(--maxw); margin:0 auto; padding:40px var(--pad)}
+
+/* hero */
+.hero{padding:48px 0}
+.hero .container{display:flex; gap:30px; align-items:center}
+.hero-left{flex:1}
+.hero-right{width:280px}
+
+h1{font-size:34px; margin:0 0 8px}
+.tag{color:var(--accent); font-weight:600; margin-bottom:12px}
+.summary{color:var(--muted); line-height:1.5; max-width:560px}
+
+.btn{display:inline-block; padding:10px 14px; border-radius:8px; background:var(--accent); color:#001220; text-decoration:none; font-weight:600; margin-right:10px}
+.btn-outline{background:transparent; color:var(--accent); border:1px solid rgba(255,255,255,0.06)}
+
+/* stats card */
+.card{background:var(--glass); padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(3,6,12,0.6)}
+.stats{display:flex; flex-direction:column; gap:14px; align-items:flex-start}
+.stats div{display:flex; gap:8px; align-items:baseline}
+.stats strong{font-size:20px}
+.stats span{color:var(--muted); font-size:13px}
+
+/* sections */
+.section{margin:28px 0}
+.section h2{font-size:20px; margin-bottom:12px}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px}
+.card.project{padding:16px}
+.card.project a{color:var(--accent); text-decoration:none; display:inline-block; margin-top:10px}
+
+/* timeline */
+.timeline .item{margin-bottom:14px; background:rgba(255,255,255,0.02); padding:14px; border-radius:10px}
+.muted{color:var(--muted); font-size:13px}
+
+/* skills */
+.skill-grid{display:flex; gap:10px; flex-wrap:wrap}
+.skill{background:rgba(255,255,255,0.03); padding:10px 12px; border-radius:8px; color:#dfe9f6}
+
+/* impact */
+.impact-list{list-style:disc; padding-left:20px; color:var(--muted)}
+
+/* contact */
+.contact .contact-info{font-weight:600; margin-top:8px}
+.links a{color:var(--accent); margin-right:12px; text-decoration:none}
+
+/* footer */
+.footer{border-top:1px solid rgba(255,255,255,0.02); padding:18px 0; margin-top:28px; color:var(--muted)}
+
+/* responsive */
+@media (max-width:800px){
+  .hero .container{flex-direction:column; align-items:flex-start}
+  .hero-right{width:100%}
+  .container{padding:20px}
+}
